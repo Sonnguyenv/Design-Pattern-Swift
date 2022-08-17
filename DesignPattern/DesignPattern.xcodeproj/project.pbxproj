@@ -16,6 +16,12 @@
 		22DB2A3C28ACF2CD004969BF /* DesignPatternTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22DB2A3B28ACF2CD004969BF /* DesignPatternTests.swift */; };
 		22DB2A4628ACF2CD004969BF /* DesignPatternUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22DB2A4528ACF2CD004969BF /* DesignPatternUITests.swift */; };
 		22DB2A4828ACF2CD004969BF /* DesignPatternUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22DB2A4728ACF2CD004969BF /* DesignPatternUITestsLaunchTests.swift */; };
+		22DB2A5828ACF64B004969BF /* DesignPatternCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22DB2A5628ACF64B004969BF /* DesignPatternCell.swift */; };
+		22DB2A5928ACF64B004969BF /* DesignPatternCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22DB2A5728ACF64B004969BF /* DesignPatternCell.xib */; };
+		22DB2A5D28ACF7F6004969BF /* DetailDesignPatternController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22DB2A5B28ACF7F6004969BF /* DetailDesignPatternController.swift */; };
+		22DB2A5E28ACF7F6004969BF /* DetailDesignPatternController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22DB2A5C28ACF7F6004969BF /* DetailDesignPatternController.xib */; };
+		22DB2A6028AD0063004969BF /* BaseHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22DB2A5F28AD0063004969BF /* BaseHeaderView.swift */; };
+		22DB2A6328AD007F004969BF /* BaseHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22DB2A6228AD007F004969BF /* BaseHeaderView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +55,12 @@
 		22DB2A4128ACF2CD004969BF /* DesignPatternUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DesignPatternUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		22DB2A4528ACF2CD004969BF /* DesignPatternUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignPatternUITests.swift; sourceTree = "<group>"; };
 		22DB2A4728ACF2CD004969BF /* DesignPatternUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignPatternUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		22DB2A5628ACF64B004969BF /* DesignPatternCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignPatternCell.swift; sourceTree = "<group>"; };
+		22DB2A5728ACF64B004969BF /* DesignPatternCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DesignPatternCell.xib; sourceTree = "<group>"; };
+		22DB2A5B28ACF7F6004969BF /* DetailDesignPatternController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailDesignPatternController.swift; sourceTree = "<group>"; };
+		22DB2A5C28ACF7F6004969BF /* DetailDesignPatternController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailDesignPatternController.xib; sourceTree = "<group>"; };
+		22DB2A5F28AD0063004969BF /* BaseHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseHeaderView.swift; sourceTree = "<group>"; };
+		22DB2A6228AD007F004969BF /* BaseHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BaseHeaderView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +114,10 @@
 				22DB2A2428ACF2CC004969BF /* AppDelegate.swift */,
 				22DB2A2628ACF2CC004969BF /* SceneDelegate.swift */,
 				22DB2A2828ACF2CC004969BF /* ViewController.swift */,
+				22DB2A6128AD0067004969BF /* Header */,
+				22DB2A5B28ACF7F6004969BF /* DetailDesignPatternController.swift */,
+				22DB2A5C28ACF7F6004969BF /* DetailDesignPatternController.xib */,
+				22DB2A5A28ACF654004969BF /* Cell */,
 				22DB2A2A28ACF2CC004969BF /* Main.storyboard */,
 				22DB2A2D28ACF2CD004969BF /* Assets.xcassets */,
 				22DB2A2F28ACF2CD004969BF /* LaunchScreen.storyboard */,
@@ -125,6 +141,24 @@
 				22DB2A4728ACF2CD004969BF /* DesignPatternUITestsLaunchTests.swift */,
 			);
 			path = DesignPatternUITests;
+			sourceTree = "<group>";
+		};
+		22DB2A5A28ACF654004969BF /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				22DB2A5628ACF64B004969BF /* DesignPatternCell.swift */,
+				22DB2A5728ACF64B004969BF /* DesignPatternCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		22DB2A6128AD0067004969BF /* Header */ = {
+			isa = PBXGroup;
+			children = (
+				22DB2A5F28AD0063004969BF /* BaseHeaderView.swift */,
+				22DB2A6228AD007F004969BF /* BaseHeaderView.xib */,
+			);
+			path = Header;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,7 +266,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				22DB2A3128ACF2CD004969BF /* LaunchScreen.storyboard in Resources */,
+				22DB2A5E28ACF7F6004969BF /* DetailDesignPatternController.xib in Resources */,
 				22DB2A2E28ACF2CD004969BF /* Assets.xcassets in Resources */,
+				22DB2A5928ACF64B004969BF /* DesignPatternCell.xib in Resources */,
+				22DB2A6328AD007F004969BF /* BaseHeaderView.xib in Resources */,
 				22DB2A2C28ACF2CC004969BF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -260,7 +297,10 @@
 			files = (
 				22DB2A2928ACF2CC004969BF /* ViewController.swift in Sources */,
 				22DB2A2528ACF2CC004969BF /* AppDelegate.swift in Sources */,
+				22DB2A6028AD0063004969BF /* BaseHeaderView.swift in Sources */,
+				22DB2A5828ACF64B004969BF /* DesignPatternCell.swift in Sources */,
 				22DB2A2728ACF2CC004969BF /* SceneDelegate.swift in Sources */,
+				22DB2A5D28ACF7F6004969BF /* DetailDesignPatternController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
