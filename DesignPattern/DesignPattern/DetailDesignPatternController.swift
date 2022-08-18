@@ -7,14 +7,11 @@
 
 import UIKit
 
-class DetailDesignPatternController: UIViewController {
+class DetailDesignPatternController: BaseViewController {
+    @IBOutlet weak var headerView: BaseHeaderView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationController?.isNavigationBarHidden = true
-    }
-
-    @IBAction func actionClose(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
+        self.headerView.multicastAuthDelegate.add(delegate: coordinator)
     }
 }

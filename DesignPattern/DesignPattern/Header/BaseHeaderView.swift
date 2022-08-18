@@ -8,15 +8,16 @@
 import Foundation
 import UIKit
 
-protocol ActionDelegate: AnyObject {
-    func 
+protocol BaseHeaderDelegate: AnyObject {
+    func actionButtonTapped()
 }
 
 class BaseHeaderView: UIView {
     
-    
     @IBOutlet var contentView: UIView!
-        
+    
+    public let multicastAuthDelegate = MulticastDelegate<BaseHeaderDelegate>()
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.commonInit()
@@ -35,6 +36,8 @@ class BaseHeaderView: UIView {
     }
     
     @IBAction func actionClose(_ sender: Any) {
-        
+        self.multicastAuthDelegate.invokeForEachDelegate { delegate in
+            delegate.actionButtonTapped()
+        }
     }
 }

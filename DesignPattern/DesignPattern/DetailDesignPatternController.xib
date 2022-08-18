@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DetailDesignPatternController" customModule="DesignPattern" customModuleProvider="target">
             <connections>
+                <outlet property="headerView" destination="UU4-8R-00H" id="vfS-mk-RpA"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -18,32 +19,30 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K6R-M2-3hB">
-                    <rect key="frame" x="20" y="68" width="24" height="24"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UU4-8R-00H" customClass="BaseHeaderView" customModule="DesignPattern" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="44" width="414" height="70"/>
+                    <color key="backgroundColor" systemColor="systemRedColor"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="24" id="qgD-Pq-sc2"/>
-                        <constraint firstAttribute="width" constant="24" id="qjJ-sx-q1b"/>
+                        <constraint firstAttribute="height" constant="70" id="c0A-6X-ChL"/>
                     </constraints>
-                    <state key="normal" title="Button"/>
-                    <buttonConfiguration key="configuration" style="plain" image="close"/>
-                    <connections>
-                        <action selector="actionClose:" destination="-1" eventType="touchUpInside" id="QbM-us-VZ0"/>
-                    </connections>
-                </button>
+                </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="K6R-M2-3hB" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="Ae3-0A-uDV"/>
-                <constraint firstItem="K6R-M2-3hB" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="24" id="qpa-aQ-oLd"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="UU4-8R-00H" secondAttribute="trailing" id="9Dw-Jg-G4r"/>
+                <constraint firstItem="UU4-8R-00H" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="QYm-0Y-5NF"/>
+                <constraint firstItem="UU4-8R-00H" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="iY0-FO-aIR"/>
             </constraints>
             <point key="canvasLocation" x="132" y="126"/>
         </view>
     </objects>
     <resources>
-        <image name="close" width="30" height="30"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
